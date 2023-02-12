@@ -68,7 +68,7 @@ function renderList(){
 function addtask(task){
     tasks.push(task);
     renderList();
-    shownotification("task added successfully :)");
+//     shownotification("task added successfully :)");
     return;
 }
 
@@ -90,13 +90,13 @@ function deletetask(taskid){
 
     tasks=ntasks;
     renderList();
-    shownotification("task deleted successfully :)");
+//     shownotification("task deleted successfully :)");
     return;
 }
 
-function shownotification(text){
-    alert(text);
-}
+// function shownotification(text){
+//     alert(text);
+// }
 
 function handlekeypress(e){
     if(e.key==="Enter"){
