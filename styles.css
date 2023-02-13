@@ -2,10 +2,13 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
+
+/* Main container has been styled below */
   #container {
     width: 500px;
     margin: 0 auto;
   }
+/* Each item in our task list will contain a checkbox to mark completion, task name and a delete icon and following code is used for that */
   ul {
     list-style-type: none;
     margin: 0;
@@ -23,6 +26,7 @@
   ul li:hover {
     background: #f3f3f3;
   }
+/* The checkbox which will mark completion of any task is styled below */
   #list input {
     padding: 0;
     height: initial;
@@ -68,6 +72,8 @@
   #list input:checked + label {
     text-decoration: line-through;
   }
+
+/* The delete icon which will deelete tasks is styled below */
   .delete {
     height: 40px;
     margin:0;
@@ -81,6 +87,7 @@
   h1 {
     text-align: center;
   }
+/* Main textbox which will be used for input is styled below which will contain an image to emphasize its application */
   .add-task {
     width: 100%;
     outline: none;
