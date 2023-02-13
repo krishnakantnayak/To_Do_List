@@ -7,6 +7,7 @@ const tccount=document.getElementById("checked-tasks");
 const completeAll=document.getElementById("complete-all");
 const clearComp=document.getElementById("clear-all-completed");
 
+// click event listeners for two buttons-> clear all marksed tasks and mark all tasks complete mentioned below
 completeAll.addEventListener('click',function(){
     for(i of tasks){
         i.completed=true;
@@ -21,7 +22,7 @@ clearComp.addEventListener('click',function(){
     tasks=ntasks;
     renderList();
 })
-
+// function to display task counts is defined below
 function eval_tasks(){
     let tc=tasks.length;
     
@@ -45,6 +46,7 @@ function eval_tasks(){
     tcount.innerHTML=tc+" tasks left";
 
 }
+//helper function to addtask() function
 function addtodom(task){
 
     const li=document.createElement('li');
@@ -54,6 +56,7 @@ function addtodom(task){
 
     tlist.append(li);
 }
+// function to display tasks list on screen is defined below
 function renderList(){
     tlist.innerHTML='';
 
@@ -64,14 +67,14 @@ function renderList(){
     // tcount.innerHTML=tasks.length;
     eval_tasks();
 }
-
+// function to add tasks to task list is defined below
 function addtask(task){
     tasks.push(task);
     renderList();
 //     shownotification("task added successfully :)");
     return;
 }
-
+// function to mark task complete/incomplete is defined below
 function markcompletetask(taskid){
 
     for(let i =0;i<tasks.length;i++){
@@ -81,7 +84,7 @@ function markcompletetask(taskid){
     }
     renderList();
 }
-
+// function to delete task is defined below
 function deletetask(taskid){
     console.log(taskid);
     let ntasks=tasks.filter(function(task){
@@ -98,6 +101,7 @@ function deletetask(taskid){
 //     alert(text);
 // }
 
+// function to capture textbox contents is defined below
 function handlekeypress(e){
     if(e.key==="Enter"){
         const title=e.target.value;
@@ -134,7 +138,7 @@ function handleClick(e){
     }
     return;
 }
-
+// init method is used for initializing the functions which needs to be called on startup
 function init(){
     document.addEventListener("click", handleClick);
     tadd.addEventListener('keyup',handlekeypress);
